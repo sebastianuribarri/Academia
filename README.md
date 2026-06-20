@@ -20,32 +20,32 @@ El proyecto fue desarrollado utilizando una arquitectura multicapa basada en .NE
 
 ### Gestión Académica
 
-* Administración de especialidades.
-* Administración de planes de estudio.
-* Gestión de materias.
-* Gestión de comisiones.
-* Gestión de cursos.
-* Gestión de docentes.
-* Gestión de alumnos.
-* Gestión de personas.
-* Gestión de asignaciones docentes.
+- Administración de especialidades.
+- Administración de planes de estudio.
+- Gestión de materias.
+- Gestión de comisiones.
+- Gestión de cursos.
+- Gestión de docentes.
+- Gestión de alumnos.
+- Gestión de personas.
+- Gestión de asignaciones docentes.
 
 ### Inscripciones
 
-* Inscripción de alumnos a cursos.
-* Consulta de inscripciones.
-* Gestión de estados académicos.
+- Inscripción de alumnos a cursos.
+- Consulta de inscripciones.
+- Gestión de estados académicos.
 
 ### Reportes
 
-* Generación de reportes PDF.
-* Consulta de información académica.
+- Generación de reportes PDF.
+- Consulta de información académica.
 
 ### Seguridad
 
-* Autenticación de usuarios.
-* Control de acceso basado en roles.
-* Gestión de permisos según perfil.
+- Autenticación de usuarios.
+- Control de acceso basado en roles.
+- Gestión de permisos según perfil.
 
 ---
 
@@ -55,34 +55,34 @@ El proyecto fue desarrollado utilizando una arquitectura multicapa basada en .NE
 
 Permite realizar operaciones de:
 
-* Alta
-* Baja
-* Modificación
-* Consulta
+- Alta
+- Baja
+- Modificación
+- Consulta
 
 sobre las siguientes entidades:
 
-* Especialidades
-* Planes
-* Materias
-* Comisiones
-* Docentes
-* Alumnos
-* Personas
-* Cursos
-* Dictados
+- Especialidades
+- Planes
+- Materias
+- Comisiones
+- Docentes
+- Alumnos
+- Personas
+- Cursos
+- Dictados
 
 ### Alumno
 
-* Inscripción a cursos.
-* Baja de inscripciones.
-* Consulta de inscripciones.
+- Inscripción a cursos.
+- Baja de inscripciones.
+- Consulta de inscripciones.
 
 ### Docente
 
-* Consulta de inscripciones.
-* Gestión de notas.
-* Actualización de información académica relacionada con sus cursos.
+- Consulta de inscripciones.
+- Gestión de notas.
+- Actualización de información académica relacionada con sus cursos.
 
 ---
 
@@ -94,10 +94,10 @@ La solución está compuesta por los siguientes proyectos:
 
 Contiene:
 
-* Entidades del dominio.
-* DTOs.
-* Servicios.
-* Reglas de negocio.
+- Entidades del dominio.
+- DTOs.
+- Servicios.
+- Reglas de negocio.
 
 ### ApiClient
 
@@ -109,10 +109,10 @@ Aplicación web destinada a docentes y alumnos.
 
 Incluye:
 
-* Inicio de sesión.
-* Consulta de información académica.
-* Gestión de inscripciones.
-* Gestión de notas.
+- Inicio de sesión.
+- Consulta de información académica.
+- Gestión de inscripciones.
+- Gestión de notas.
 
 ### WindowsForms
 
@@ -120,10 +120,10 @@ Aplicación de escritorio utilizada para tareas administrativas.
 
 Incluye:
 
-* Administración completa del sistema.
-* Gestión de usuarios.
-* Gestión académica.
-* Generación de reportes.
+- Administración completa del sistema.
+- Gestión de usuarios.
+- Gestión académica.
+- Generación de reportes.
 
 ---
 
@@ -152,10 +152,6 @@ Incluye:
 #### Login
 
 ![Login Web](./docs/login-web.png)
-
-#### Portal Docente
-
-![Portal Docente](./docs/docentes-web.png)
 
 #### Portal Alumno
 
@@ -187,9 +183,9 @@ Incluye:
 
 ### Requisitos
 
-* .NET 8 SDK
-* SQL Server
-* Visual Studio 2022
+- .NET 8 SDK
+- SQL Server
+- Visual Studio 2022
 
 ### Clonar el repositorio
 
@@ -216,21 +212,21 @@ git clone https://github.com/sebastianuribarri/Academia.git
 
 Durante el desarrollo de este proyecto se aplicaron conceptos relacionados con:
 
-* Arquitectura multicapa.
-* Diseño de aplicaciones empresariales.
-* APIs REST.
-* Persistencia de datos.
-* Entity Framework y ADO.NET.
-* Gestión de usuarios y permisos.
-* Desarrollo de aplicaciones web y de escritorio.
-* Trabajo colaborativo utilizando Git y GitHub.
+- Arquitectura multicapa.
+- Diseño de aplicaciones empresariales.
+- APIs REST.
+- Persistencia de datos.
+- Entity Framework y ADO.NET.
+- Gestión de usuarios y permisos.
+- Desarrollo de aplicaciones web y de escritorio.
+- Trabajo colaborativo utilizando Git y GitHub.
 
 ---
 
 ## Equipo
 
-* Francisco Buthet
-* Sebastián Uribarri
+- Francisco Buthet
+- Sebastián Uribarri
 
 ---
 
