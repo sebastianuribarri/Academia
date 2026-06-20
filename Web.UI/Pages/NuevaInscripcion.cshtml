@@ -1,0 +1,30 @@
+﻿@page
+@model NuevaInscripcionModel
+@{
+    ViewData["Title"] = "Nueva Inscripción";
+}
+
+<h2>Nueva Inscripción</h2>
+
+<form method="post">
+    <div>
+        <label>Materia:</label>
+        <select asp-for="InscripcionRequest.id_materia" asp-items="Model.MateriasSelectList" id="materiaSelect">
+            <option value="">Seleccione una Materia</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Comisión:</label>
+        <select asp-for="InscripcionRequest.id_comision" asp-items="Model.ComisionesSelectList" id="comisionSelect">
+            <option value="">Seleccione una Comisión</option>
+        </select>
+    </div>
+
+    <button type="submit">Inscribirse</button>
+</form>
+
+@if (Model.ErrorMessage != null)
+{
+    <p style="color:red">@Model.ErrorMessage</p>
+}

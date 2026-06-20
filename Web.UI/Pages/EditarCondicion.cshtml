@@ -1,0 +1,27 @@
+﻿@page "/EditarCondicion/{id:int}"
+@model EditarCondicionModel
+@{
+    ViewData["Title"] = "Editar Condición";
+}
+
+<h2>Editar Condición</h2>
+
+<form method="post">
+    <div>
+        <label>Condición:</label>
+        <select asp-for="Inscripcion.condicion" asp-items="Model.CondicionesSelectList"></select>
+    </div>
+
+    <div>
+        <label>Nota:</label>
+        <input asp-for="Inscripcion.nota" type="number" min="0" max="10" step="0.1" />
+    </div>
+
+    <button type="submit">Actualizar Condición</button>
+</form>
+
+@if (Model.ErrorMessage != null)
+{
+    <p style="color:red">@Model.ErrorMessage</p>
+}
+ 

@@ -1,0 +1,50 @@
+﻿@page "/Docente"
+@model InscripcionesDocenteModel
+@{
+    ViewData["Title"] = "Docente";
+}
+
+<h2>Listado de condiciones y notas</h2>
+
+@if (Model.Inscripciones.Count == 0)
+{
+    <p>No se encontraron inscripciones asignadas al docente.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Legajo</th>
+                <th>Nombre y Apellido</th>
+                <th>Especialidad</th>
+                <th>Plan</th>
+                <th>Materia</th>
+                <th>Comisión</th>
+                <th>Condición</th>
+                <th>Nota</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var inscripcion in Model.Inscripciones)
+            {
+                <tr>
+                    <td>@inscripcion.legajo</td>
+                    <td>@inscripcion.nombre_apellido</td>
+                    <td>@inscripcion.especialidad</td>
+                    <td>@inscripcion.plan</td>
+                    <td>@inscripcion.materia</td>
+                    <td>@inscripcion.comision</td>
+                    <td>@inscripcion.condicion</td>
+                    <td>@(inscripcion.nota.HasValue ? inscripcion.nota.ToString() : "-")</td>
+                    <td>
+                        <a asp-page="/EditarCondicion" asp-route-id="@inscripcion.id_inscripcion" class="btn btn-primary">
+                            Modificar
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

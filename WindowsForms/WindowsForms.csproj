@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiClient\ApiClient.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ComisionesLista.cs" />
+    <Compile Update="ComisionesRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdministradorRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdministradoresLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InscripcionModificarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PlanesRegistro.cs" />
+    <Compile Update="EspecialidadLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PlanesLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PersonaLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EspecialidadRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PersonaRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="AlumnosLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AlumnoRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

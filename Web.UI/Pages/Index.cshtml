@@ -1,0 +1,24 @@
+﻿@page "/"
+@model IndexModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form method="post">
+    <div>
+        <label>Nombre de Usuario:</label>
+        <input asp-for="LoginRequest.NombreUsuario" />
+    </div>
+    <div>
+        <label>Contraseña:</label>
+        <input asp-for="LoginRequest.Clave" type="password" />
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+@if (Model.ErrorMessage != null)
+{
+    <p style="color:red">@Model.ErrorMessage</p>
+}

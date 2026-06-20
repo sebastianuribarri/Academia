@@ -1,0 +1,53 @@
+﻿@page
+@model InscripcionesModel
+@{
+    ViewData["Title"] = "Inscripciones";
+}
+
+<h2>Inscripciones del Alumno</h2>
+
+<a asp-page="/NuevaInscripcion" class="btn btn-primary">Nueva Inscripción</a>
+
+<!-- Mostrar mensaje de error si existe -->
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.ErrorMessage
+    </div>
+}
+
+@if (Model.Inscripciones.Count == 0)
+{
+    <p>No se encontraron inscripciones para este usuario.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Materia</th>
+                <th>Comision</th>
+                <th>Condición</th>
+                <th>Nota</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var inscripcion in Model.Inscripciones)
+            {
+                <tr>
+                    <td>@inscripcion.materia</td>
+                    <td>@inscripcion.comision</td>
+                    <td>@inscripcion.condicion</td>
+                    <td>@inscripcion.nota</td>
+                    <td>
+                        <!-- Formulario para eliminar inscripción -->
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@inscripcion.id_inscripcion">
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
